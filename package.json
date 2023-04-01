@@ -1,0 +1,13 @@
+{
+  "name": "ecs-sample",
+  "version": "0.0.0",
+  "description": "A sample application deployed via AWS ECS",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.5.0"
+  }
+}
