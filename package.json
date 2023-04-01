@@ -2,9 +2,18 @@
   "name": "ecs-sample",
   "version": "0.0.0",
   "description": "A sample application deployed via AWS ECS",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Malik Mahmud",
+    "email": "almalikmahmud@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MlkMahmud/ecs-sample.git"
+  },
   "license": "ISC",
   "engines": {
     "node": "18.15.0",
@@ -26,6 +35,9 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.3"
   }
 }
