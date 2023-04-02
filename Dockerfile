@@ -8,7 +8,7 @@ ENV PORT 80
 
 WORKDIR /usr/src/app
 
-COPY --chown=node:node dist/ package*.json .
+COPY --chown=node:node dist/ package*.json ./
 
 RUN npm pkg delete scripts.prepare
 
