@@ -25,7 +25,7 @@ class ApplicationStack extends cdk.Stack {
           removalPolicy: cdk.RemovalPolicy.DESTROY,
           retention: cdk.aws_logs.RetentionDays.ONE_DAY
         }),
-        streamPrefix: ''
+        streamPrefix: 'my-logs'
       }),
       portMappings: [{ containerPort: 80 }]
     });
