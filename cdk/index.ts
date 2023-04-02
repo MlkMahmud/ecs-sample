@@ -27,7 +27,7 @@ class ApplicationStack extends cdk.Stack {
         }),
         streamPrefix: 'my-logs'
       }),
-      portMappings: [{ containerPort: 80 }]
+      portMappings: [{ containerPort: 8080 }]
     });
 
     new ecsPatterns.ApplicationLoadBalancedFargateService(this, 'Fargateservice', {
