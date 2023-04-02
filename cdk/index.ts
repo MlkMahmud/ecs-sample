@@ -18,10 +18,16 @@ class ApplicationStack extends cdk.Stack {
     });
 
     taskDefinition.addContainer('WebContainer', {
-      portMappings: [{
-        containerPort: 80
-      }],
-      image: ecs.ContainerImage.fromAsset(path.join(__dirname, '..'))
+      image: ecs.ContainerImage.fromAsset(path.join(__dirname, '..')),
+      logging: ecs.LogDriver.awsLogs({
+        logGroup: new cdk.aws_logs.LogGroup(this, 'LogGroup', {
+          logGroupName: '/aws/ecs/web',
+          removalPolicy: cdk.RemovalPolicy.DESTROY,
+          retention: cdk.aws_logs.RetentionDays.ONE_DAY
+        }),
+        streamPrefix: ''
+      }),
+      portMappings: [{ containerPort: 80 }]
     });
 
     new ecsPatterns.ApplicationLoadBalancedFargateService(this, 'Fargateservice', {
