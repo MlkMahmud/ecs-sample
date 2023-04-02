@@ -11,6 +11,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "no-new": "off",
     "semi": "off",
     "@typescript-eslint/semi": "off"
   }

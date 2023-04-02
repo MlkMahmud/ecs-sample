@@ -4,6 +4,8 @@
   "description": "A sample application deployed via AWS ECS",
   "scripts": {
     "build": "tsc -p tsconfig.prod.json",
+    "cdk:bootstrap": "cdk bootstrap --verbose --require-approval never",
+    "cdk:deploy": "cdk deploy --verbose --require-approval never",
     "dev": "cross-env NODE_ENV=development nodemon",
     "prepare": "husky install"
   },
